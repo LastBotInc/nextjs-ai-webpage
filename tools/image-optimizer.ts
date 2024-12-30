@@ -1,8 +1,14 @@
-const Replicate = require('replicate');
-const dotenv = require('dotenv');
-const { writeFile, readFile } = require('fs/promises');
-const path = require('path');
-const sharp = require('sharp');
+import Replicate from 'replicate';
+import dotenv from 'dotenv';
+import { writeFile, readFile } from 'fs/promises';
+import path from 'path';
+import sharp from 'sharp';
+
+// Ensure script only runs in development
+if (process.env.NODE_ENV === 'production') {
+  console.error('This tool is only available in development environment');
+  process.exit(1);
+}
 
 dotenv.config();
 
@@ -44,9 +50,13 @@ async function optimizeImage(options: OptimizeOptions) {
       );
 
       // Download the processed image
-      const response = await fetch(output);
-      imageBuffer = Buffer.from(await response.arrayBuffer());
-      pipeline = sharp(imageBuffer);
+      if (typeof output === 'string') {
+        const response = await fetch(output);
+        imageBuffer = Buffer.from(await response.arrayBuffer());
+        pipeline = sharp(imageBuffer);
+      } else {
+        throw new Error('Expected string URL from remove-bg API');
+      }
     }
 
     // Resize if requested

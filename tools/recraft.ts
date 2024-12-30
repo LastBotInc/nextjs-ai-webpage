@@ -1,7 +1,13 @@
-const Replicate = require('replicate');
-const dotenv = require('dotenv');
-const { writeFile, mkdir } = require('fs/promises');
-const path = require('path');
+import Replicate from 'replicate';
+import dotenv from 'dotenv';
+import { writeFile, mkdir } from 'fs/promises';
+import path from 'path';
+
+// Ensure script only runs in development
+if (process.env.NODE_ENV === 'production') {
+  console.error('This tool is only available in development environment');
+  process.exit(1);
+}
 
 console.log('Script started');
 
