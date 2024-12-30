@@ -41,14 +41,14 @@
     - Confirm all required files were read
     - List key findings from each file
     - Explain how these findings inform the implementation
-3. When I say implement, please implement the code using following steps using chain of thoughts reasoning.
+3. When I say implement, please implement the code using the process defined in step 2.
 4. When I say validate, please review and validate the code for correctness and execute the unit tests for it. If you don't have unit tests, please create them.
 5. When I say record, write summary of what you did in the ai_changelog.md and update the todo list in the todo.md (do not remove any tasks, just update their status)
 6. When I say invent, please implement a tool in the tools/ directory and write a tool description in .cursorrules file. Run it.
-7. When I say design, please plan for the app or change and update all needed documentation
+7. When I say plan, please plan for the app or change and update all needed documentation
 8. When I say commit, please commit all pending changes using git add . and git commit with descriptive message
 9. When I say fix, please use chain of thoughts thinking to reason why the error occurs and then implement the fix for the error.
-10. When I say
+10. When I say design, please design the frontend of the application or feature and generate and optimise images for it
 
 #Web Tools
 {
