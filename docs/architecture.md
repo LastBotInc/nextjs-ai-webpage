@@ -34,11 +34,33 @@
 └── configuration files    # Various config files
 ```
 
-## Testing Strategy
-- Unit tests for utility functions
-- Integration tests for API endpoints
-- E2E tests for critical user flows
-- Visual regression testing for UI components
+## Testing
+
+### Unit Testing
+- Jest for unit testing
+- React Testing Library for component testing
+- Test files located in `__tests__` directories next to the code they test
+- Mocking of external dependencies (Replicate API, file system, etc.)
+
+### E2E Testing
+- Cypress for end-to-end testing
+- Tests located in `cypress/e2e` directory
+- Tests run against local development server
+- Key flows tested:
+  - Navigation
+  - Theme switching
+  - Feature visibility
+  - Image generation (planned)
+  - Image optimization (planned)
+
+### Test Scripts
+- `npm test`: Run unit tests
+- `npm run test:watch`: Run unit tests in watch mode
+- `npm run test:coverage`: Run unit tests with coverage report
+- `npm run cypress`: Open Cypress UI
+- `npm run cypress:headless`: Run Cypress tests headless
+- `npm run test:e2e`: Start dev server and run E2E tests
+- `npm run test:e2e:headless`: Start dev server and run E2E tests headless
 
 ## Development Workflow
 1. Local development with `npm run dev`
