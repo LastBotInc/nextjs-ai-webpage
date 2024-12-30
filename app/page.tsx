@@ -1,101 +1,131 @@
 import Image from "next/image";
+import { Button } from "./components/Button";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative py-20 px-6 sm:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                AI-Powered Next.js Template
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+                  {" "}for Cursor IDE
+                </span>
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8">
+                Build intelligent web applications faster with our AI-integrated Next.js template.
+                Featuring Recraft image generation, optimization tools, and modern development practices.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg">
+                  Get Started
+                </Button>
+                <Button variant="outline" size="lg">
+                  View on GitHub
+                </Button>
+              </div>
+            </div>
+            <div className="relative w-full aspect-[16/9] lg:aspect-[16/10]">
+              <Image
+                src="/images/home/hero.webp"
+                alt="AI-powered workspace illustration"
+                fill
+                className="rounded-lg shadow-2xl object-cover"
+                priority
+              />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-6 sm:px-12 lg:px-24 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Everything you need to build AI-powered applications
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {/* Feature 1: Image Generation */}
+            <div className="flex flex-col rounded-xl bg-white dark:bg-gray-800 shadow-lg overflow-hidden">
+              <div className="relative w-full aspect-square">
+                <Image
+                  src="/images/home/image-generation.webp"
+                  alt="AI Image Generation Feature"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">AI Image Generation</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Generate stunning images with Recraft V3 API integration. Create any visual content with simple text prompts.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 2: Image Optimization */}
+            <div className="flex flex-col rounded-xl bg-white dark:bg-gray-800 shadow-lg overflow-hidden">
+              <div className="relative w-full aspect-square">
+                <Image
+                  src="/images/home/optimization.webp"
+                  alt="Image Optimization Feature"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Image Optimization</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Optimize your images automatically with our built-in tools. Reduce file size while maintaining quality.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 3: Brand Assets */}
+            <div className="flex flex-col rounded-xl bg-white dark:bg-gray-800 shadow-lg overflow-hidden">
+              <div className="relative w-full aspect-square">
+                <Image
+                  src="/images/home/brand-assets.webp"
+                  alt="Brand Asset Generator Feature"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Brand Asset Generator</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Create consistent brand assets with AI. Generate logos, social media templates, and more.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6 sm:px-12 lg:px-24 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+            Ready to Build Something Amazing?
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            Get started with our template and build your next project faster.
+          </p>
+          <Button size="lg">
+            Start Building Now
+          </Button>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/5 dark:to-purple-500/5" />
+      </section>
     </div>
   );
 }

@@ -1,0 +1,100 @@
+#Agent rules
+1. The system is documented in the document folder under following documents. Please keep them up to date according to my input and feedback.
+   1.1 description.md:
+       - Provide concise description of the app or system idea
+       - Document core use cases and features
+   2.2 architecture.md:
+       - Define full technical stack (frontend/backend frameworks, databases)
+       - Folder structure
+       - Testing frameworks and strategy
+   3.3 datamodel.md:
+       - Document all entities, attributes and relationships
+   4.4 frontend.md:
+       - List and describe all views/screens
+       - Define UI/UX patterns and styling approach
+   5.5 backend.md:
+       - Document all API endpoints and authentication
+       - Define service architecture and components
+   6.6 todo.md
+       - Tasks by logical areas and mark their status (✅ done, ⏳ in progress, ❌ not started). Next priority tasks in the end.
+       - Prefer full stack tasks.
+   6.7 ai_changelog.md
+       - Changelog of changes done
+   6.8 learnings.md
+       - Technical learnings and best practices discovered during development
+       - Solutions to common issues and pitfalls
+       - Keep entries concise (max 100 words per learning)
+
+2. IMPORTANT! When receiving an request from me, always perform first a comprehensive study and chain of thought reasoning of what to do.
+  2.1 REQUIRED: First scan and read ALL the needed documentation from the /docs folder
+  2.2 Always consider the end-to-end implementation, think changes needed for UI, API queries, backend and database.
+  2.3 If you are planning to use an API or library, first search the @Web for up-to-date documentation.
+  2.4 Search the codebase for relevant files and methods first for getting context. Don't make assumptions.
+  2.5 After you have all the context, perform chain of thoughts using this format:
+    1. "Reading required files..."
+    2. "Analysis: what I found in the files..."
+    3. "Plan: what needs to be done..."
+    4. "Implementation: how I'll do it..."
+
+  2.5 Consider correct folder and files on where to implement changes. Read @architecture.md for folder structure.
+  2.6 Before proceeding with implementation:
+    - Confirm all required files were read
+    - List key findings from each file
+    - Explain how these findings inform the implementation
+3. When I say implement, please implement the code using following steps using chain of thoughts reasoning.
+4. When I say validate, please review and validate the code for correctness and execute the unit tests for it. If you don't have unit tests, please create them.
+5. When I say record, write summary of what you did in the ai_changelog.md and update the todo list in the todo.md (do not remove any tasks, just update their status)
+6. When I say invent, please implement a tool in the tools/ directory and write a tool description in .cursorrules file. Run it.
+7. When I say design, please plan for the app or change and update all needed documentation
+8. When I say commit, please commit all pending changes using git add . and git commit with descriptive message
+9. When I say fix, please use chain of thoughts thinking to reason why the error occurs and then implement the fix for the error.
+10. When I say
+
+#Web Tools
+{
+  "tools": {
+    "supabase-cli": {
+      "description": "Runs supabase cli commands with --linked flag",
+      "command": "supabase --linked"
+    },
+    "generate-test-data": {
+      "description": "Generates test data for the application, including users, groups, and group memberships.",
+      "command": "node scripts/generate-test-data.ts"
+    },
+    "recraft": {
+      "description": "Generates images using Recraft V3 API (SOTA text-to-image model)",
+      "command": "npx ts-node tools/recraft.ts",
+      "options": {
+        "prompt": "Text description of the desired image",
+        "style": "(Optional) Image style to use (default: digital_illustration). Available styles:\n
+        - realistic_image (and variants: b_and_w, hard_flash, hdr, natural_light, studio_portrait, enterprise, motion_blur)\n
+        - digital_illustration (and variants: pixel_art, hand_drawn, grain, infantile_sketch, 2d_art_poster, handmade_3d, hand_drawn_outline, engraving_color, 2d_art_poster_2)",
+        "negative_prompt": "(Optional) Things to avoid in the image",
+        "width": "(Optional) Image width in pixels. Available sizes: 1024, 1365, 1536, 1820, 2048, 1434, 1280, 1707 (default: 1024)",
+        "height": "(Optional) Image height in pixels. Available sizes: 1024, 1365, 1536, 1820, 2048, 1434, 1280, 1707 (default: 1024)",
+        "num_outputs": "(Optional) Number of images to generate (default: 1)",
+        "scheduler": "(Optional) Sampling method to use",
+        "num_inference_steps": "(Optional) Number of denoising steps (default: 50)",
+        "guidance_scale": "(Optional) How closely to follow the prompt (default: 7.5)",
+        "seed": "(Optional) Random seed for reproducibility"
+      },
+      "requires": ["REPLICATE_API_TOKEN in .env"]
+    },
+    "image-optimizer": {
+      "description": "Optimizes images with background removal, resizing, and format conversion",
+      "command": "npx ts-node tools/image-optimizer.ts",
+      "options": {
+        "input": "Path to input image",
+        "output": "Path to output image",
+        "remove-bg": "(Optional) Remove image background using AI",
+        "resize": "(Optional) Resize image (format: WIDTHxHEIGHT, e.g. 800x600)",
+        "format": "(Optional) Convert to format (png, jpeg, or webp)",
+        "quality": "(Optional) Set output quality (1-100, default: 80)"
+      },
+      "requires": [
+        "REPLICATE_API_TOKEN in .env",
+        "sharp package (npm install sharp)"
+      ]
+    }
+  }
+}
