@@ -50,6 +50,10 @@
 9. When I say fix, please use chain of thoughts thinking to reason why the error occurs and then implement the fix for the error.
 10. When I say design, please design the frontend of the application or feature and generate and optimise images for it
 
+Important rules:
+- Do not ever create a new project, scan the folders to understand the project structure.
+
+
 #Web Tools
 {
   "tools": {
