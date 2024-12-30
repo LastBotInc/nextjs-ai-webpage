@@ -1,7 +1,7 @@
-import Replicate from 'replicate';
-import dotenv from 'dotenv';
-import { writeFile, mkdir } from 'fs/promises';
-import path from 'path';
+const Replicate = require('replicate');
+const dotenv = require('dotenv');
+const { writeFile, mkdir } = require('fs/promises');
+const path = require('path');
 
 console.log('Script started');
 
@@ -20,7 +20,7 @@ console.log('Environment check:', {
   pwd: process.cwd()
 });
 
-export type RecraftStyle =
+type RecraftStyle =
   | "realistic_image"
   | "digital_illustration"
   | "digital_illustration/pixel_art"
@@ -40,7 +40,7 @@ export type RecraftStyle =
   | "realistic_image/enterprise"
   | "realistic_image/motion_blur";
 
-export type RecraftSize =
+type RecraftSize =
   | "1024x1024"
   | "1365x1024"
   | "1024x1365"
@@ -57,7 +57,7 @@ export type RecraftSize =
   | "1024x1707"
   | "1707x1024";
 
-export interface RecraftOptions {
+interface RecraftOptions {
   prompt: string;
   style?: RecraftStyle;
   negative_prompt?: string;
@@ -83,7 +83,7 @@ interface ApiError {
   };
 }
 
-export class RecraftGenerator {
+class RecraftGenerator {
   private static DEFAULT_OPTIONS = {
     width: 1024,
     height: 1024,
@@ -195,7 +195,11 @@ export class RecraftGenerator {
   }
 }
 
-export const { generateImage } = RecraftGenerator;
+// Export for CommonJS
+module.exports = {
+  RecraftGenerator,
+  generateImage: RecraftGenerator.generateImage
+};
 
 // CLI interface
 const isRunningAsCLI = process.argv[1]?.endsWith('recraft.ts');
