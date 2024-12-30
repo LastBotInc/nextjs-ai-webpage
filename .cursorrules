@@ -63,7 +63,7 @@
     },
     "recraft": {
       "description": "Generates images using Recraft V3 API (SOTA text-to-image model)",
-      "command": "npx ts-node tools/recraft.ts",
+      "command": "npm run recraft",
       "options": {
         "prompt": "Text description of the desired image",
         "style": "(Optional) Image style to use (default: digital_illustration). Available styles:\n
@@ -76,13 +76,16 @@
         "scheduler": "(Optional) Sampling method to use",
         "num_inference_steps": "(Optional) Number of denoising steps (default: 50)",
         "guidance_scale": "(Optional) How closely to follow the prompt (default: 7.5)",
-        "seed": "(Optional) Random seed for reproducibility"
+        "seed": "(Optional) Random seed for reproducibility",
+        "folder": "(Optional) Output folder path",
+        "filename": "(Optional) Output filename"
       },
-      "requires": ["REPLICATE_API_TOKEN in .env"]
+      "requires": ["REPLICATE_API_TOKEN in .env"],
+      "example": "npm run recraft -- --prompt \"A modern logo with blue background\" --style digital_illustration --folder public/images --filename logo.png"
     },
     "image-optimizer": {
       "description": "Optimizes images with background removal, resizing, and format conversion",
-      "command": "npx ts-node tools/image-optimizer.ts",
+      "command": "npm run optimize-image",
       "options": {
         "input": "Path to input image",
         "output": "Path to output image",
@@ -94,7 +97,8 @@
       "requires": [
         "REPLICATE_API_TOKEN in .env",
         "sharp package (npm install sharp)"
-      ]
+      ],
+      "example": "npm run optimize-image -- input.png output.webp --resize 512x512 --format webp --quality 90"
     }
   }
 }
