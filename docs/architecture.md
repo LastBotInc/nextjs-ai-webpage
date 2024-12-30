@@ -11,6 +11,7 @@
 ### Backend
 - Next.js API Routes
 - Recraft V3 API integration
+- Tavily API for web search
 - Image processing libraries (Sharp)
 
 ### Development Tools
@@ -29,6 +30,8 @@
 ├── tools/                 # AI and utility tools
 │   ├── recraft.ts         # Recraft API integration
 │   ├── image-optimizer.ts # Image processing utilities
+│   ├── tavily-search.ts   # Web search capabilities
+│   ├── html-to-md.ts      # HTML to Markdown converter
 │   └── generate-brand-images.ts # Brand asset generation
 ├── docs/                  # Project documentation
 └── configuration files    # Various config files

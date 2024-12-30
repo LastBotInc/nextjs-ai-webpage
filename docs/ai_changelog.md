@@ -45,3 +45,15 @@
 - Created basic E2E tests for home page
 - Updated documentation with testing strategy and scripts
 - Added test scripts to package.json
+
+## Latest Changes
+
+### 2024-12-30
+- Added web research tools:
+  - Implemented Tavily API integration for AI-powered web search
+  - Added multiple search modes: regular search, Q&A, and context generation
+  - Added domain filtering and advanced search options
+  - Added HTML to Markdown conversion tool
+  - Updated documentation to include web research capabilities
+  - Generated and optimized web research illustration
+  - Updated front page with web research tools section

@@ -103,6 +103,37 @@ Important rules:
         "sharp package (npm install sharp)"
       ],
       "example": "npm run optimize-image -- input.png output.webp --resize 512x512 --format webp --quality 90"
+    },
+    "html-to-md": {
+      "description": "Scrapes a webpage and converts its HTML content to Markdown format",
+      "command": "npm run html-to-md",
+      "options": {
+        "url": "URL of the webpage to scrape",
+        "output": "(Optional) Output file path for the markdown (default: output.md)",
+        "selector": "(Optional) CSS selector to target specific content"
+      },
+      "requires": [
+        "Node.js >= 14",
+        "Internet connection for scraping"
+      ],
+      "example": "npm run html-to-md -- --url https://example.com --output docs/scraped.md --selector main"
+    },
+    "tavily-search": {
+      "description": "Performs AI-powered web search using Tavily API",
+      "command": "npm run tavily-search",
+      "options": {
+        "query": "Search query text",
+        "type": "(Optional) Search type: 'search' (default) or 'analyze' for detailed analysis",
+        "depth": "(Optional) Search depth: 'basic' (default) or 'advanced'",
+        "max-results": "(Optional) Maximum number of results (default: 5)",
+        "include": "(Optional) Comma-separated list of domains to include",
+        "exclude": "(Optional) Comma-separated list of domains to exclude"
+      },
+      "requires": [
+        "TAVILY_API_KEY in .env",
+        "@tavily/client package"
+      ],
+      "example": "npm run tavily-search -- --query \"Next.js best practices\" --type analyze --depth advanced --max-results 10"
     }
   }
 }

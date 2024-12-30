@@ -1,61 +1,45 @@
-# Project Todo List
+# Todo List
 
-## Frontend Tasks
-
-### UI Components
-- ❌ Create reusable button component
-- ❌ Implement form components with validation
-- ❌ Build image preview component
+## Frontend
+- ❌ Implement home page layout
+- ❌ Add theme switcher component
+- ❌ Create image generation form
+- ❌ Add image preview component
+- ❌ Create image gallery component
 - ❌ Add loading states and animations
+- ❌ Implement responsive design
+- ❌ Add web search interface
 
-### Pages
-- ⏳ Complete home page layout
-  - ✅ Generate front page images
-  - ✅ Implement basic responsive layout
-  - ✅ Add feature showcase section
-  - ❌ Add animations and transitions
-  - ❌ Add interactive elements
-- ❌ Build image generation interface
-- ❌ Create image optimization page
-- ❌ Develop brand asset generator page
-
-### Styling
-- ✅ Set up Tailwind CSS
-- ✅ Implement dark/light mode
-- ❌ Create responsive layouts
-- ❌ Add transitions and animations
-
-## Backend Tasks
-
-### API Development
-- ❌ Set up API routes structure
+## Backend
+- ❌ Set up Next.js API routes
 - ❌ Implement image generation endpoint
-- ❌ Create image optimization endpoint
-- ❌ Build brand asset generation endpoint
+- ❌ Add image optimization endpoint
+- ❌ Implement error handling
+- ❌ Add rate limiting
+- ❌ Set up caching
+- ❌ Add web search API endpoints
 
-### Services
-- ✅ Configure Recraft API integration
-- ✅ Set up image optimization service
-- ❌ Implement brand asset service
-- ❌ Add error handling and logging
-
-### Testing
-- ✅ Write unit tests for utilities
-- ✅ Set up E2E testing framework
-- ✅ Add component tests
-- ⏳ Add API endpoint tests
-- ⏳ Implement E2E testing
-- ❌ Set up CI/CD pipeline
+## Tools
+- ✅ Implement Recraft API integration
+- ✅ Create image optimization tool
+- ✅ Add brand asset generator
+- ✅ Implement Tavily search tool
+- ✅ Add HTML to Markdown converter
+- ❌ Add unit tests for tools
+- ❌ Add error handling for tools
 
 ## Documentation
 - ✅ Create initial documentation structure
-- ✅ Document architecture and setup
+- ✅ Document architecture and tech stack
+- ✅ Add tool usage documentation
+- ✅ Update documentation with web research tools
 - ❌ Add API documentation
-- ❌ Include usage examples
+- ❌ Create user guide
+- ❌ Add examples and tutorials
 
 ## Next Priority Tasks
-1. Complete home page implementation
-2. Set up API routes and endpoints
-3. Implement image generation interface
-4. Add comprehensive error handling
-5. Write basic test suite
+1. Implement home page layout
+2. Create image generation form
+3. Add web search interface
+4. Set up API routes
+5. Add unit tests for tools

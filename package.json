@@ -15,7 +15,9 @@
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
     "test:e2e": "start-server-and-test dev http://localhost:3000 cypress",
-    "test:e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
+    "test:e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
+    "html-to-md": "NODE_ENV=development tsx tools/html-to-md.ts",
+    "tavily-search": "NODE_ENV=development tsx tools/tavily-search.ts"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
@@ -24,7 +26,12 @@
     "next-themes": "^0.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "replicate": "^0.25.1"
+    "replicate": "^0.25.1",
+    "axios": "^1.6.7",
+    "turndown": "^7.1.2",
+    "yargs": "^17.7.2",
+    "@tavily/core": "*",
+    "chalk": "^4.1.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -45,6 +52,8 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@types/turndown": "^5.0.4",
+    "@types/yargs": "^17.0.32"
   }
 }

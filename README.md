@@ -1,6 +1,6 @@
 # AI-Powered Next.js Template for Cursor IDE
 
-A modern, AI-integrated Next.js template designed specifically for the Cursor IDE. This template provides a robust foundation for building intelligent web applications with features like AI image generation, optimization tools, and brand asset creation.
+A modern, AI-integrated Next.js template designed specifically for the Cursor IDE. This template provides a robust foundation for building intelligent web applications with features like AI image generation, web research, optimization tools, and brand asset creation.
 
 ![AI-powered workspace](public/images/home/hero.webp)
 
@@ -24,11 +24,17 @@ A modern, AI-integrated Next.js template designed specifically for the Cursor ID
 - Social media templates
 - Business card designs
 
+### 🔍 Web Research Tools
+- AI-powered web search with Tavily API
+- Multiple search modes: regular, Q&A, and context
+- Domain filtering and advanced search options
+- HTML to Markdown conversion for content processing
+
 ## Tech Stack
 
 - **Frontend**: Next.js 15.1.3, React 19
 - **Styling**: Tailwind CSS, Geist Font
-- **AI Integration**: Recraft V3 API
+- **AI Integration**: Recraft V3 API, Tavily API
 - **Image Processing**: Sharp.js
 - **Development**: TypeScript, ESLint
 - **Performance**: Built-in image optimization, responsive design
@@ -52,6 +58,7 @@ A modern, AI-integrated Next.js template designed specifically for the Cursor ID
    ```
    Add your API keys:
    - `REPLICATE_API_TOKEN`: Get from [Replicate](https://replicate.com)
+   - `TAVILY_API_KEY`: Get from [Tavily](https://tavily.com)
 
 4. Run the development server:
    ```bash
@@ -90,6 +97,25 @@ Options:
 - `--resize`: Resize image (e.g., 800x600)
 - `--remove-bg`: Remove image background
 
+### Web Search
+```bash
+npm run tavily-search -- --query "your search query" [options]
+```
+Options:
+- `--type`: Search type (search, qna, context)
+- `--depth`: Search depth (basic, advanced)
+- `--max-results`: Maximum number of results
+- `--include`: Domains to include
+- `--exclude`: Domains to exclude
+
+### HTML to Markdown
+```bash
+npm run html-to-md -- --url "webpage-url" [options]
+```
+Options:
+- `--output`: Output file path
+- `--selector`: CSS selector for specific content
+
 ## Project Structure
 
 ```
@@ -97,7 +123,11 @@ Options:
 ├── components/          # Reusable React components
 ├── public/             # Static assets
 │   └── images/         # Optimized images
-├── tools/              # CLI tools for image processing
+├── tools/              # CLI tools
+│   ├── recraft.ts      # Image generation
+│   ├── image-optimizer.ts # Image processing
+│   ├── tavily-search.ts  # Web search
+│   └── html-to-md.ts     # Content conversion
 ├── styles/             # Global styles
 └── docs/              # Project documentation
 ```
@@ -127,4 +157,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Next.js](https://nextjs.org) - The React Framework
 - [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
 - [Recraft AI](https://recraft.ai) - AI image generation
+- [Tavily](https://tavily.com) - AI-powered web search
 - [Cursor IDE](https://cursor.sh) - AI-powered code editor
