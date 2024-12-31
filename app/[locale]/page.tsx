@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
+import { Button } from '@/app/components/Button';
+
+const GITHUB_URL = 'https://github.com/LastBotInc/nextjs-ai-webpage';
 
 export default function Home() {
   const t = useTranslations('Index');
@@ -14,6 +17,14 @@ export default function Home() {
         <p className="text-xl text-gray-600 dark:text-gray-300">
           {t('hero.description')}
         </p>
+        <div className="flex justify-center gap-4 mt-8">
+          <Button size="lg" href={GITHUB_URL}>
+            {t('cta.button')}
+          </Button>
+          <Button size="lg" variant="outline" href={`${GITHUB_URL}#getting-started`}>
+            {t('hero.getStarted')}
+          </Button>
+        </div>
         <Image
           src="/images/home/hero.webp"
           alt={t('hero.imageAlt')}
@@ -92,12 +103,9 @@ export default function Home() {
         <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
           {t('cta.description')}
         </p>
-        <a
-          href="https://github.com/yourusername/nextjs-ai-webpage"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-        >
+        <Button size="lg" href={GITHUB_URL}>
           {t('cta.button')}
-        </a>
+        </Button>
       </section>
     </main>
   );

@@ -7,6 +7,7 @@
 - TypeScript
 - Tailwind CSS for styling
 - Geist font family
+- next-intl for internationalization
 
 ### Backend
 - Next.js API Routes
@@ -24,8 +25,16 @@
 ```
 ├── app/                    # Next.js app directory
 │   ├── layout.tsx         # Root layout component
-│   ├── page.tsx           # Home page component
+│   ├── [locale]/          # Locale-specific routes
+│   │   ├── layout.tsx     # Locale layout with i18n providers
+│   │   └── page.tsx       # Localized home page
 │   └── globals.css        # Global styles
+├── i18n/                  # Internationalization setup
+│   ├── routing.ts         # Locale routing configuration
+│   └── request.ts         # Server-side locale handling
+├── messages/              # Translation files
+│   ├── en.json           # English translations
+│   └── fi.json           # Finnish translations
 ├── public/                # Static assets
 ├── tools/                 # AI and utility tools
 │   ├── recraft.ts         # Recraft API integration
@@ -36,6 +45,26 @@
 ├── docs/                  # Project documentation
 └── configuration files    # Various config files
 ```
+
+## Internationalization
+
+### Structure
+- Uses next-intl for translations and routing
+- Locale-based routing with `/[locale]` prefix
+- Server-side locale detection
+- Client-side language switching
+- Supports English (en) and Finnish (fi)
+
+### Translation Files
+- JSON-based message files in `/messages`
+- Structured by feature/component
+- Fallback to English for missing translations
+
+### Routing
+- Locale prefix in all routes (e.g., /en/about, /fi/tietoa)
+- Automatic locale detection
+- Language switcher in navigation
+- SEO-friendly URLs
 
 ## Testing
 
@@ -53,6 +82,7 @@
   - Navigation
   - Theme switching
   - Feature visibility
+  - Language switching
   - Image generation (planned)
   - Image optimization (planned)
 

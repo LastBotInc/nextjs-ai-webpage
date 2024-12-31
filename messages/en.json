@@ -3,7 +3,8 @@
     "hero": {
       "title": "AI-Powered Web Development",
       "description": "Build intelligent web applications with Next.js and AI capabilities",
-      "imageAlt": "AI-powered workspace"
+      "imageAlt": "AI-powered workspace",
+      "getStarted": "Get Started"
     },
     "features": {
       "imageGeneration": {

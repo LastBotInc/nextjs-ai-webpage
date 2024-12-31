@@ -3,7 +3,8 @@
     "hero": {
       "title": "Tekoälypohjainen Web-kehitys",
       "description": "Rakenna älykkäitä web-sovelluksia Next.js:llä ja tekoälytoiminnoilla",
-      "imageAlt": "Tekoälypohjainen työtila"
+      "imageAlt": "Tekoälypohjainen työtila",
+      "getStarted": "Aloita tästä"
     },
     "features": {
       "imageGeneration": {

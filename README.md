@@ -1,10 +1,17 @@
 # AI-Powered Next.js Template for Cursor IDE
 
-A modern, AI-integrated Next.js template designed specifically for the Cursor IDE. This template provides a robust foundation for building intelligent web applications with features like AI image generation, web research, optimization tools, and brand asset creation.
+A modern, AI-integrated Next.js template designed specifically for the Cursor IDE. This template provides a robust foundation for building intelligent web applications with features like AI image generation, web research, optimization tools, brand asset creation, and internationalization support.
 
 ![AI-powered workspace](public/images/home/hero.webp)
 
 ## Features
+
+### 🌐 Internationalization
+- Built-in support for multiple languages (English, Finnish)
+- SEO-friendly URL structure with locale prefixes
+- Server-side locale detection
+- Client-side language switching
+- JSON-based translation management
 
 ### 🎨 AI Image Generation
 - Powered by Recraft V3 API
@@ -36,6 +43,7 @@ A modern, AI-integrated Next.js template designed specifically for the Cursor ID
 - **Styling**: Tailwind CSS, Geist Font
 - **AI Integration**: Recraft V3 API, Tavily API
 - **Image Processing**: Sharp.js
+- **Internationalization**: next-intl
 - **Development**: TypeScript, ESLint
 - **Performance**: Built-in image optimization, responsive design
 
@@ -43,7 +51,7 @@ A modern, AI-integrated Next.js template designed specifically for the Cursor ID
 
 1. Clone the repository:
    ```bash
-   git clone [your-repo-url]
+   git clone https://github.com/LastBotInc/nextjs-ai-webpage.git
    cd nextjs-ai-webpage
    ```
 
@@ -89,7 +97,7 @@ Options:
 
 ### Image Optimization
 ```bash
-npx tsx tools/image-optimizer.ts <input> <output> [options]
+npx tsx tools/image-optimizer.ts <input> <o> [options]
 ```
 Options:
 - `--format`: Convert to webp/png/jpeg
@@ -120,7 +128,11 @@ Options:
 
 ```
 ├── app/                  # Next.js app directory
+│   ├── [locale]/        # Locale-specific routes
+│   └── layout.tsx       # Root layout
 ├── components/          # Reusable React components
+├── i18n/               # Internationalization setup
+├── messages/           # Translation files
 ├── public/             # Static assets
 │   └── images/         # Optimized images
 ├── tools/              # CLI tools
@@ -142,7 +154,7 @@ Detailed documentation is available in the `docs` directory:
 
 ## Contributing
 
-1. Fork the repository
+1. Fork the repository from [GitHub](https://github.com/LastBotInc/nextjs-ai-webpage)
 2. Create your feature branch
 3. Commit your changes
 4. Push to the branch
@@ -158,4 +170,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
 - [Recraft AI](https://recraft.ai) - AI image generation
 - [Tavily](https://tavily.com) - AI-powered web search
+- [next-intl](https://next-intl-docs.vercel.app) - Internationalization framework
 - [Cursor IDE](https://cursor.sh) - AI-powered code editor
