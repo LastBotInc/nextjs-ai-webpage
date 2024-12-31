@@ -9,27 +9,27 @@
     "features": {
       "imageGeneration": {
         "title": "🎨 AI Image Generation",
-        "description": "Create stunning visuals with Recraft V3 API. Choose from multiple styles and customize to your needs.",
-        "imageAlt": "AI Image Generation example"
+        "description": "Create stunning images with Recraft V3 API. Choose from multiple styles and customize to your needs.",
+        "imageAlt": "AI image generation example"
       },
       "imageOptimization": {
         "title": "🔧 Image Optimization",
-        "description": "Optimize images automatically with background removal, resizing, and format conversion.",
-        "imageAlt": "Image Optimization example"
+        "description": "Automatically optimize images with background removal, resizing, and format conversions.",
+        "imageAlt": "Image optimization example"
       },
       "brandAssets": {
-        "title": "🎯 Brand Asset Generator",
-        "description": "Generate consistent brand assets including logos, social media templates, and business cards.",
-        "imageAlt": "Brand Asset Generation example"
+        "title": "🎯 Brand Asset Creation",
+        "description": "Create consistent brand assets like logos, social media templates, and business cards.",
+        "imageAlt": "Brand asset creation example"
       },
       "webResearch": {
         "title": "🔍 Web Research Tools",
-        "description": "Powerful AI-driven web research with Tavily API. Search, analyze, and process web content with multiple modes and advanced filtering.",
-        "imageAlt": "Web Research Tools example"
+        "description": "Powerful AI-powered web research with Tavily API. Search, analyze, and process web content with multiple modes and advanced filtering.",
+        "imageAlt": "Web research tools example"
       }
     },
     "cta": {
-      "title": "Get Started Today",
+      "title": "Start Today",
       "description": "Build your next project with AI-powered tools and modern web technologies.",
       "button": "View on GitHub"
     }
@@ -42,7 +42,54 @@
     "language": "Language"
   },
   "About": {
-    "title": "About Us",
-    "description": "Learn more about our company and mission"
+    "title": "About LastBot",
+    "description": "LastBot is an AI-driven startup operating in Finland and the United States, specializing in reliable and impactful customer communication solutions. Founded in 2023 by Pasi Vuorio and Tero Heinonen, we focus on using artificial intelligence to help businesses reduce costs and improve their operations.",
+    "founder": {
+      "title": "Meet Our Co-founder",
+      "name": "Pasi Vuorio",
+      "role": "CEO & Co-founder",
+      "bio": "Hey, I'm Pasi Vuorio, co-founder of LastBot and a longtime AI solutions architect. I've spent the last two years fully immersed in AI and language models, working to create innovative solutions that transform how businesses communicate and operate."
+    }
+  },
+  "Services": {
+    "title": "AI Training Services",
+    "description": "Expert-led training in AI development and implementation by Pasi Vuorio, who has trained hundreds of developers across Finland's leading tech companies.",
+    "services": {
+      "aiDevelopment": {
+        "title": "AI-Assisted Development Training",
+        "description": "Learn how to effectively use AI tools in your development workflow. From code generation to pair programming with AI, master the techniques that will boost your productivity.",
+        "clients": "Trusted by leading companies like Siili Solutions, Reaktor, and Hellon"
+      },
+      "generativeAI": {
+        "title": "Generative AI Fundamentals",
+        "description": "Comprehensive training on generative AI technologies, including large language models, image generation, and practical applications in business contexts.",
+        "focus": "Understanding capabilities, limitations, and real-world use cases"
+      },
+      "promptEngineering": {
+        "title": "Prompt Engineering Mastery",
+        "description": "Master the art of crafting effective prompts for AI models. Learn advanced techniques for controlling AI outputs and achieving consistent results.",
+        "practical": "Hands-on exercises with real business scenarios"
+      }
+    },
+    "trainer": {
+      "title": "About the Trainer",
+      "description": "Pasi Vuorio is a recognized AI expert who has trained hundreds of developers across Finland. His practical approach combines deep technical knowledge with real-world business applications.",
+      "experience": "Extensive experience in AI solutions architecture and implementation"
+    }
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "description": "Have questions about how LastBot can help your business? Visit our website or send us an email to learn more.",
+    "contact": {
+      "title": "Contact Information",
+      "website": "Website",
+      "email": "Email"
+    },
+    "locations": {
+      "title": "Our Locations",
+      "oulu": "Oulu, Finland",
+      "espoo": "Espoo, Finland",
+      "sacramento": "Sacramento, USA"
+    }
   }
 }

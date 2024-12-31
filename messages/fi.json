@@ -42,7 +42,54 @@
     "language": "Kieli"
   },
   "About": {
-    "title": "Tietoa meistä",
-    "description": "Lue lisää yrityksestämme ja missiostamme"
+    "title": "Tietoa LastBotista",
+    "description": "LastBot on suomalainen ja yhdysvaltalainen tekoäly-startup, joka on erikoistunut luotettaviin ja vaikuttaviin asiakasviestinnän ratkaisuihin. Vuonna 2023 perustetun yrityksen perustajat ovat Pasi Vuorio ja Tero Heinonen. Keskitymme auttamaan yrityksiä vähentämään kustannuksia ja tehostamaan toimintaansa tekoälyn avulla.",
+    "founder": {
+      "title": "Tapaa perustajamme",
+      "name": "Pasi Vuorio",
+      "role": "Toimitusjohtaja ja perustaja",
+      "bio": "Hei, olen Pasi Vuorio, LastBotin perustaja ja pitkäaikainen tekoälyratkaisujen arkkitehti. Olen viimeiset kaksi vuotta työskennellyt intensiivisesti tekoälyn ja kielimallien parissa, kehittäen innovatiivisia ratkaisuja, jotka muuttavat yritysten tapaa viestiä ja toimia."
+    }
+  },
+  "Services": {
+    "title": "Tekoälykoulutuspalvelut",
+    "description": "Asiantuntijavetoista tekoälykoulutusta kehittäjille ja yrityksille. Pasi Vuorio on kouluttanut satoja kehittäjiä Suomen johtavissa teknologiayrityksissä.",
+    "services": {
+      "aiDevelopment": {
+        "title": "Tekoälyavusteinen kehitys",
+        "description": "Opi hyödyntämään tekoälytyökaluja tehokkaasti kehitystyössäsi. Koulutus kattaa koodin generoinnin ja tekoälyavusteisen pariohjelmoinnin tekniikat tuottavuutesi parantamiseksi.",
+        "clients": "Asiakkaitamme mm. Siili Solutions, Reaktor ja Hellon"
+      },
+      "generativeAI": {
+        "title": "Generatiivisen tekoälyn perusteet",
+        "description": "Kattava koulutus generatiivisesta tekoälystä, mukaan lukien kielimallit, kuvageneraatio ja käytännön sovellukset liiketoiminnassa.",
+        "focus": "Ymmärrä mahdollisuudet, rajoitukset ja todelliset käyttötapaukset"
+      },
+      "promptEngineering": {
+        "title": "Prompt-suunnittelun mestariksi",
+        "description": "Hallitse tehokkaan prompt-suunnittelun taito. Opi edistyneet tekniikat tekoälyn tuotosten hallintaan ja johdonmukaisten tulosten saavuttamiseen.",
+        "practical": "Käytännön harjoituksia todellisilla liiketoimintaskenaarioilla"
+      }
+    },
+    "trainer": {
+      "title": "Kouluttajasta",
+      "description": "Pasi Vuorio on tunnustettu tekoälyasiantuntija, joka on kouluttanut satoja kehittäjiä ympäri Suomea. Hänen käytännönläheinen lähestymistapansa yhdistää syvällisen teknisen osaamisen todellisiin liiketoimintasovelluksiin.",
+      "experience": "Laaja kokemus tekoälyratkaisujen arkkitehtuurista ja toteutuksesta"
+    }
+  },
+  "Contact": {
+    "title": "Ota yhteyttä",
+    "description": "Haluatko tietää miten LastBot voi auttaa yritystäsi? Tutustu verkkosivuihimme tai lähetä meille sähköpostia.",
+    "contact": {
+      "title": "Yhteystiedot",
+      "website": "Verkkosivut",
+      "email": "Sähköposti"
+    },
+    "locations": {
+      "title": "Toimipisteemme",
+      "oulu": "Oulu, Suomi",
+      "espoo": "Espoo, Suomi",
+      "sacramento": "Sacramento, USA"
+    }
   }
 }
