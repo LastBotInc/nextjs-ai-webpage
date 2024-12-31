@@ -20,16 +20,17 @@ export function generateStaticParams() {
 async function getMessages(locale: string) {
   try {
     return (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
+  } catch {
     notFound();
   }
 }
 
-export default async function LocaleLayout({ children, params }: Props) {
+export default async function LocaleLayout({ children }: Omit<Props, 'params'>) {
   const locale = await requestLocale();
 
   // Validate that the incoming locale is supported
-  if (!locales.includes(locale as any)) {
+  const typedLocale = locale as typeof locales[number];
+  if (!locales.includes(typedLocale)) {
     notFound();
   }
 

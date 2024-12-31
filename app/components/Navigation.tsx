@@ -5,7 +5,6 @@ import { Link, usePathname } from '@/app/i18n/routing';
 import LocaleSwitcher from '@/app/components/LocaleSwitcher';
 import { useTheme } from 'next-themes';
 import { Button } from '@/app/components/Button';
-import { pathnames } from '@/app/i18n/routing';
 
 export default function Navigation() {
   const t = useTranslations('Navigation');
