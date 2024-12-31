@@ -1,0 +1,47 @@
+{
+  "Index": {
+    "hero": {
+      "title": "AI-Powered Web Development",
+      "description": "Build intelligent web applications with Next.js and AI capabilities",
+      "imageAlt": "AI-powered workspace"
+    },
+    "features": {
+      "imageGeneration": {
+        "title": "🎨 AI Image Generation",
+        "description": "Create stunning visuals with Recraft V3 API. Choose from multiple styles and customize to your needs.",
+        "imageAlt": "AI Image Generation example"
+      },
+      "imageOptimization": {
+        "title": "🔧 Image Optimization",
+        "description": "Optimize images automatically with background removal, resizing, and format conversion.",
+        "imageAlt": "Image Optimization example"
+      },
+      "brandAssets": {
+        "title": "🎯 Brand Asset Generator",
+        "description": "Generate consistent brand assets including logos, social media templates, and business cards.",
+        "imageAlt": "Brand Asset Generation example"
+      },
+      "webResearch": {
+        "title": "🔍 Web Research Tools",
+        "description": "Powerful AI-driven web research with Tavily API. Search, analyze, and process web content with multiple modes and advanced filtering.",
+        "imageAlt": "Web Research Tools example"
+      }
+    },
+    "cta": {
+      "title": "Get Started Today",
+      "description": "Build your next project with AI-powered tools and modern web technologies.",
+      "button": "View on GitHub"
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "About": {
+    "title": "About Us",
+    "description": "Learn more about our company and mission"
+  }
+}

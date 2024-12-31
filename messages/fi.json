@@ -1,0 +1,47 @@
+{
+  "Index": {
+    "hero": {
+      "title": "Tekoälypohjainen Web-kehitys",
+      "description": "Rakenna älykkäitä web-sovelluksia Next.js:llä ja tekoälytoiminnoilla",
+      "imageAlt": "Tekoälypohjainen työtila"
+    },
+    "features": {
+      "imageGeneration": {
+        "title": "🎨 Tekoälykuvien luonti",
+        "description": "Luo upeita kuvia Recraft V3 API:lla. Valitse useista tyyleistä ja mukauta tarpeisiisi.",
+        "imageAlt": "Tekoälykuvien luonnin esimerkki"
+      },
+      "imageOptimization": {
+        "title": "🔧 Kuvien optimointi",
+        "description": "Optimoi kuvat automaattisesti taustan poistolla, koon muutoksilla ja formaatin muunnoksilla.",
+        "imageAlt": "Kuvien optimoinnin esimerkki"
+      },
+      "brandAssets": {
+        "title": "🎯 Brändimateriaalien luonti",
+        "description": "Luo yhtenäisiä brändimateriaaleja, kuten logoja, some-pohjia ja käyntikortteja.",
+        "imageAlt": "Brändimateriaalien luonnin esimerkki"
+      },
+      "webResearch": {
+        "title": "🔍 Web-tutkimustyökalut",
+        "description": "Tehokas tekoälypohjainen web-tutkimus Tavily API:lla. Hae, analysoi ja käsittele web-sisältöä useilla moodeilla ja edistyneellä suodatuksella.",
+        "imageAlt": "Web-tutkimustyökalujen esimerkki"
+      }
+    },
+    "cta": {
+      "title": "Aloita tänään",
+      "description": "Rakenna seuraava projektisi tekoälypohjaisilla työkaluilla ja moderneilla web-teknologioilla.",
+      "button": "Katso GitHubissa"
+    }
+  },
+  "Navigation": {
+    "home": "Etusivu",
+    "about": "Tietoa",
+    "services": "Palvelut",
+    "contact": "Yhteystiedot",
+    "language": "Kieli"
+  },
+  "About": {
+    "title": "Tietoa meistä",
+    "description": "Lue lisää yrityksestämme ja missiostamme"
+  }
+}

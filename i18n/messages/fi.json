@@ -1,0 +1,19 @@
+{
+  "Index": {
+    "title": "Tervetuloa sovellukseemme",
+    "description": "Tämä on Next.js-sovellus tekoälytoiminnoilla",
+    "getStarted": "Aloita tästä"
+  },
+  "Navigation": {
+    "home": "Etusivu",
+    "about": "Tietoa",
+    "contact": "Yhteystiedot"
+  },
+  "Common": {
+    "loading": "Ladataan...",
+    "error": "Tapahtui virhe",
+    "retry": "Yritä uudelleen",
+    "save": "Tallenna",
+    "cancel": "Peruuta"
+  }
+}

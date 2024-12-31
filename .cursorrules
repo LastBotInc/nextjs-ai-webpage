@@ -39,7 +39,7 @@ delete_file - For deleting files
     },
     "image-optimizer": {
       "description": "Optimizes images with background removal, resizing, and format conversion",
-       "tool": "run_terminal_cmd",
+      "tool": "run_terminal_cmd",
       "command": "npm run optimize-image",
       "options": {
         "input": "Path to input image",
@@ -55,7 +55,7 @@ delete_file - For deleting files
       ],
       "example": "npm run optimize-image -- input.png output.webp --resize 512x512 --format webp --quality 90"
     },
-    "html-to-md": {
+    "read-url": {
       "description": "Scrapes a webpage and converts its HTML content to Markdown format",
       "tool": "run_terminal_cmd",
       "command": "npm run html-to-md",
@@ -108,7 +108,6 @@ delete_file - For deleting files
 }
 
 
-
 #Agent rules
 1. The system is documented in the docs folder under following documents. Please before performing any task, scan and read ALL the needed docs to plan the task. Keep them up to date according to my input and feedback.
    1.1 description.md:
@@ -147,9 +146,10 @@ delete_file - For deleting files
     5. "Implementation: how I'll do it..."
   2.6 If you need more information or clarifications, please ask me before proceeding with the implementation
 
-3. If your run into an error or bug, please use following steps for resolving them
+3. If tools returns an error or I refer to an error, please use following steps for resolving them
   3.1 First read learnings.md from the docs folder if you have an ready solutions for this
-  3.2 Then search the web using Tavily search for the quick error resolutions.
+  3.2 If the error contains a link to web page explaining the error, please read the url
+  3.2 Then search the web using web search for the quick error resolutions.
   3.3 Perform chain of thoughts reasoning for the cause and potential fixes for the error
   3.4 Fix and validate the error
   3.5 Document the error resolution to learnings.md, including any links that you found usable.
@@ -161,7 +161,12 @@ delete_file - For deleting files
    - perform above tasks 1 and 2 for reading the documents and performing the study
    - write a summary of what do to
 
-  4.1. When I say implement, please implement the code and unit tests for it using the process defined above. Use tools when needed.
+  4.2. When I say implement:
+  - perform above tasks 1 and 2 for reading the documents and performing the study
+  - implement the code and unit tests for it using the process defined above.
+  - if images are needed in the implementation, create images to public folder with descriptive names and optimise them
+  - run unit and e2e tests
+
   4.2  When I say validate, please review and validate the code for correctness and execute the unit tests for it. If you don't have unit tests, please create them.
   4.3. When I say record, write summary of what you did in the ai_changelog.md and update the todo list in the todo.md (do not remove any tasks, just update their status)
   4.4. When I say invent, please implement a tool in the tools/ directory and write a tool description in .cursorrules file. Run it.

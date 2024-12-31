@@ -1,0 +1,19 @@
+{
+  "Index": {
+    "title": "Welcome to Our App",
+    "description": "This is a Next.js application with AI capabilities",
+    "getStarted": "Get Started"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try Again",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}
