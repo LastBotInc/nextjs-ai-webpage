@@ -156,24 +156,36 @@ delete_file - For deleting files
 
 
 4. Always follow my instructions on what to do and perform next. Perform only actions in the following list.
-  4.1 When I ask to research:
+  4.1 When I ask to research or plan:
    - perform full research using web search about how to implement task in current version framework.
    - perform above tasks 1 and 2 for reading the documents and performing the study
-   - write a summary of what do to
+   - please plan for the app or change and update all needed documentation
 
-  4.2. When I say implement:
+  4.2. When I ask to implement:
   - perform above tasks 1 and 2 for reading the documents and performing the study
   - implement the code and unit tests for it using the process defined above.
   - if images are needed in the implementation, create images to public folder with descriptive names and optimise them
-  - run unit and e2e tests
+  - run unit and e2e tests, fix errors
 
-  4.2  When I say validate, please review and validate the code for correctness and execute the unit tests for it. If you don't have unit tests, please create them.
-  4.3. When I say record, write summary of what you did in the ai_changelog.md and update the todo list in the todo.md (do not remove any tasks, just update their status)
-  4.4. When I say invent, please implement a tool in the tools/ directory and write a tool description in .cursorrules file. Run it.
-  4.5. When I say plan, please plan for the app or change and update all needed documentation
-  4.6. When I say commit, please commit all pending changes using git add . and git commit with descriptive message
-  4.7. When I say fix, please fix the the error using process defined in step 3.
-  4.8. When I say design, please design the frontend of the application or feature and generate and optimise images for it
+  4.2  When I ask to validate:
+  - check if you have unit tests and e2e tests, create them if they do not exist
+  - please review and validate the code for correctness and execute the tests.
+
+  4.3. When I ask to record:
+  -  write summary of what you did in the ai_changelog.md and update the todo list in the todo.md (do not remove any tasks, just update their status)
+
+  4.4. When I ask to invent:
+  - please implement a tool in the tools/ directory and write a tool description in .cursorrules file. Run it.
+
+  4.5. When I ask to commit:
+  - please commit all pending changes using git add . and git commit with descriptive message
+
+  4.6. When I ask to fix:
+  - run a web search for finding a solution
+  - fix the the error using process defined in step 3.
+
+  4.7. When I ask to design:
+  - please design the frontend of the application or feature and generate and optimise images for it
 
 Important rules:
 - Do not ever create a new project, scan the folders to understand the project structure.
