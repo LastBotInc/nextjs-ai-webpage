@@ -214,10 +214,11 @@ For each request, I will:
 1. Analyze the request type and determine required actions from:
    - research: For understanding context and requirements
    - design: For UI/UX and visual elements
+   - document: For updating the documentation
    - develop: For implementation
    - validate: For testing
    - fix: For error resolution
-   - record: For documentation
+   - record: For recording changes and todo
    - invent: For creating new tools
    - commit: For version control
 
