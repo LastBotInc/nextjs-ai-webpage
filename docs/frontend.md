@@ -25,6 +25,51 @@
 - Style customization
 - Batch generation interface
 
+### Blog
+- Overview
+  - Clean, minimal blog index with featured posts
+  - Grid/list view toggle for posts
+  - Category and tag filtering
+  - Search functionality
+  - Pagination with infinite scroll
+
+- Individual Post View
+  - Hero image with title overlay
+  - Table of contents (for long posts)
+  - Rich text content with MDX support
+  - Author information
+  - Related posts
+  - Share buttons
+  - Comment section (optional)
+
+- Blog Components
+  - PostCard: Preview card for blog listings
+    - Featured image
+    - Title and excerpt
+    - Category tags
+    - Reading time
+    - Publication date
+  - AuthorBio: Author information display
+    - Avatar
+    - Name and bio
+    - Social links
+  - TableOfContents: Navigation for long posts
+    - Sticky positioning
+    - Active section highlighting
+  - CategoryFilter: Filter posts by category
+    - Multi-select support
+    - Count indicators
+  - SearchBar: Full-text search interface
+    - Auto-suggestions
+    - Recent searches
+
+- Responsive Considerations
+  - Mobile: Single column layout
+  - Tablet: Two column grid
+  - Desktop: Three column grid
+  - Adaptive typography
+  - Collapsible table of contents on mobile
+
 ## UI/UX Patterns
 
 ### Design System

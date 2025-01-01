@@ -135,6 +135,10 @@ delete_file - For deleting files
     @learnings.md
         - Consise technical learnings and best practices discovered during development
         - Solutions to occurred errors, including potential links
+
+  Following files in the root folder explains the used libraries:
+    @package.json:
+      - list of used npm packages and their versions
 </documentation>
 
 <actions>
@@ -143,20 +147,17 @@ delete_file - For deleting files
   </document>
 
   <research>
-  Perform a comprehensive study and chain of thought reasoning of what to do.
-    1. read_file @description for context and @architecture.md for folder structure. Consider correct folders and files on where to implement changes.
-    2. Always consider the end-to-end implementation, think changes needed for UI, API queries, backend and database.
-    3. list_dir for all relevant folders
-    4. execute codebase_search for finding relevant files and methods first for getting context. Don't make assumptions.
-    5. Search the web using Tavily tool for up-to-date documentation and getting started.
-    6. After you have all the context, perform chain of thoughts using this format:
-      6.1. "Reading required files..."
-      6.2. "Analysis: what I found in the files..."
-      6.3. "Plan: what needs to be done, what tools I need..."
-      6.4. "Need more info: what more do I need to know..."
-      6.5. "Implementation: how I'll do it..."
-    7. If you need more information or clarifications, please stop and ask me before proceeding to next step
-    8. Update documentation defined in <documentation> and write a tasklist to todo.md
+  Perform a comprehensive study and chain of thought reasoning of what to do. Steps:
+    1. read_file @description, @architecture.md and /package.json for getting context
+    2. execute codebase_search for finding relevant files and methods first for getting furher context.
+    3. tavily-search the web for up-to-date documentation and getting started. Run at least one query always.
+    4. After you have all the context, perform chain of thoughts using this format:
+      4.1. "Reading required files..."
+      4.2. "Analysis: what I found in the files..."
+      4.3. "Plan: what needs to be done, what tools I need..."
+      4.4. "Implementation: how I'll do it..."
+      4.5. "Need more info: what more do I need to know..."
+    5. Present the questions for the user to refine the plan
   </research>
 
   <fix>
@@ -180,10 +181,12 @@ delete_file - For deleting files
   </validate>
 
   <record>
+   Record the changes done and update backlog
    1. write summary of what you did in the ai_changelog.md and update the todo list in the todo.md (do not remove any tasks, just update their status)
   </record>
 
   <design>
+   Design a feature.
    1. read_file frontend.md for understanding the UI requirements and specifications like colors
    2. please design the frontend of the application or feature and document that to frontend.md
    3. generate any images or illustrations needed in the feature
@@ -191,13 +194,10 @@ delete_file - For deleting files
    5. write short instructions for the developer to communicate the design and images
   </design>
 
-  <implement>
-   1. Perform a research in <research> tag until I explicitly tell to continue to design phase
-   2. Perform a design process until I explicitly tell to continue to implementation phase
-   3. Develop the full e2e code changes for the requested feature
-   4. Perform a validate process
-   5. Record the results
-  </implement>
+  <develop>
+   Develop a feature.
+    1. Develop the full e2e code changes for the requested feature
+  </develop>
 
   <invent>
     1. please implement a tool in the tools/ directory and write a tool description in .cursorrules file.
@@ -209,20 +209,46 @@ delete_file - For deleting files
   </commit>
 </actions>
 
-<important>
-Important rules:
+For each request, I will:
+
+1. Analyze the request type and determine required actions from:
+   - research: For understanding context and requirements
+   - design: For UI/UX and visual elements
+   - develop: For implementation
+   - validate: For testing
+   - fix: For error resolution
+   - record: For documentation
+   - invent: For creating new tools
+   - commit: For version control
+
+2. Present my analysis with:
+   "Request type: [type]"
+   "Required actions in order:"
+   1. [action 1]
+   2. [action 2]
+   ...
+
+3. For each action:
+   - State "Starting [action]..."
+   - Follow the action's specific steps
+   - Show "Completed [action]"
+   - Ask "Would you like me to proceed to [next action] or do you need any adjustments?"
+
+4. Before proceeding to next action:
+   - Wait for explicit confirmation
+   - Document completed work in relevant files:
+     - ai_changelog.md: What was done
+     - todo.md: Update task status
+     - learnings.md: For any solutions/fixes
+     - Other relevant documentation
+
+5. After final action:
+   - Summarize all changes made
+   - Ask if any final adjustments are needed
+
+Please provide your request and I will analyze it according to this process.
+
+Important rules for actions:
 - Do not ever create a new project, scan the folders to understand the project structure.
 - Do not rely on your current knowledge about libraries, always search the web for up-to-date information
-</important>
-
-Now, considering above actions, analyse the intent and actions needed and first say what actions you are executing and execute them thoroughly according to instructions.
-Start by planning your task using example:
----
-I'm performing <main process name> / <sub process name>, current step is <sub sub process name>. In this process I'll execute following steps:
-- <step 1>
-- <step 2>
-
-Next phase is:
-- <process name / next sub process> when <conditions to continue>
-----
-
+- Always install the latest version of the libraries
